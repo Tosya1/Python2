@@ -20,8 +20,7 @@ print(f'Транспонированная матрица: {transpose_matrix(mat
 def get_param_dict(**kwargs):
     params_dict = {}
     for key, value in kwargs.items():
-        if isinstance(value, list) or isinstance(value, dict) \
-                or isinstance(value, set) or isinstance(value, bytearray):
+        if isinstance(value, (list, dict, set,bytearray)):
             params_dict.setdefault(str(value), key)
         else:
             params_dict.setdefault(value, key)
