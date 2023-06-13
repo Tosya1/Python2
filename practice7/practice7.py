@@ -11,13 +11,13 @@
 #✔ Соберите из созданных на уроке и в рамках домашнего задания функций пакет для работы с файлами.
 from pathlib import Path
 
-def create_number(n, digits_count):
+def create_number(n: int, digits_count: int) -> str:
     if len(str(n)) < digits_count:
         return (digits_count - len(str(n)))*'0' + str(n)
     else:
         return str(n)
 
-def check_name_range(string: str, range: list[int]):
+def check_name_range(string: str, range: list[int]) -> list[int]:
     if len(string) >= range[1]:
         return [range[0]-1, range[1]]
     elif len(string) < range[0]:
