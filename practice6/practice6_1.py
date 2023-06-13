@@ -46,4 +46,4 @@ def _check_leap_year(year: int) -> bool:
     return True
 
 
-print(check_date(*(argv[1])))
+print(check_date(argv[1]))
